@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PersonalityQuizMauiApp.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Label
+                Text="SuperHero Personality Quiz"
+                HorizontalTextAlignment="Center"
+                FontSize="30"
+                >
+            </Label>
+
+            <Image
+                x:Name="TheImage"
+                Source="teamworkheros.png"
+                SemanticProperties.Description="Ugly Cat"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="TheQuestion"
+                Text="I face challenges head-on, without fear?"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="20"
+                HorizontalOptions="Center" 
+                />
+
+            <SwipeView
+                x:Name="SwipeView"
+                >
+                <SwipeView.LeftItems>
+                    <SwipeItems>
+                        <SwipeItem Text="False"
+                        BackgroundColor="LightPink"
+                        Invoked="OnClickedFalse"
+                       />
+                    </SwipeItems>
+                </SwipeView.LeftItems>
+                <SwipeView.RightItems>
+                    <SwipeItems>
+                        <SwipeItem Text="True"
+                                   BackgroundColor="Green"
+                                   Invoked="OnClickedTrue"
+                                   />
+                    </SwipeItems>
+                </SwipeView.RightItems>
+                <Grid  HeightRequest="100"
+                       WidthRequest="300"
+                       BackgroundColor="#200ef1">
+                <Label Text="     Swipe&#x0a;Left or Right"
+                       HorizontalOptions="Center"
+                       TextColor="White"
+                       FontSize="25"
+                       VerticalOptions="Center" />
+                </Grid>
+            </SwipeView>
+
+                
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
